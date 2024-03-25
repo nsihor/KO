@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
     <title>KO</title>
 </head>
 <body>
@@ -13,13 +14,13 @@
         <div class="nd_h_container">
             <div class="nd_h_left">
 <!--                mobile-->
-                <button class="nd_h_burger_btn">
+                <button data-action="nd-burger" class="nd_h_menu_btn">
                     <svg width="25" height="14">
                         <use href="./img/svg/burger-menu.svg#burger_btn"></use>
                     </svg>
                     <span>MENU</span>
                 </button>
-                <button class="nd_h_close_btn">
+                <button data-action="nd-close" class="nd_h_menu_btn nd_none">
                     <svg width="21" height="20">
                         <use href="./img/svg/close.svg#close_btn"></use>
                     </svg>
@@ -64,7 +65,7 @@
             </div>
             <div class="nd_h_rightBottom">
                 <ul class="nd_h_pages_list_d">
-                    <li><a href="">Main page</a></li>
+                    <li class="nd_current_d"><a href="">Main page</a></li>
                     <li><a href="">Contacts</a></li>
                     <li><a href="">Rates</a></li>
                     <li><a href="">News</a></li>
@@ -72,32 +73,33 @@
                 </ul>
                 <button class="nd_w_btn">Login</button>
                 <button class="nd_b_btn">Registration</button>
-            </div>
-<!--            mobile-->
-            <div class="nd_h_menu">
-                <ul class="nd_h_pages_list_m">
-                    <li><a href="">Main page</a></li>
-                    <li><a href="">Contacts</a></li>
-                    <li><a href="">Rates</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Support</a></li>
-                </ul>
-                <button class="nd_w_btn">Login</button>
-                <button class="nd_b_btn">Registration</button>
-                <a class="nd_h_tel" href="tel:+380444816995">
-                    <svg>
-                        <use href="./img/svg/telephone-fill.svg"></use>
-                    </svg>
-                    +38 (044) 481-69-95
-                </a>
-                <button class="nd_h_impaired_btn">
-                    <svg>
-                        <use href="./img/svg/eye-slash.svg"></use>
-                    </svg>
-                    People with impaired vision
-                </button>
             </div>
         </div>
     </header>
+    <!--            mobile-->
+    <div data-action="nd-mob-menu" class="nd_h_menu nd_none">
+        <ul class="nd_h_pages_list_m">
+            <li class="nd_current_m"><a href="">Main page</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Rates</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Support</a></li>
+        </ul>
+        <button class="nd_w_btn">Login</button>
+        <button class="nd_b_btn">Registration</button>
+        <a class="nd_h_tel" href="tel:+380444816995">
+            <svg>
+                <use href="./img/svg/telephone-fill.svg"></use>
+            </svg>
+            +38 (044) 481-69-95
+        </a>
+        <button class="nd_h_impaired_btn">
+            <svg>
+                <use href="./img/svg/eye-slash.svg"></use>
+            </svg>
+            People with impaired vision
+        </button>
+    </div>
+<script src="index.js" type="module"></script>
 </body>
 </html>

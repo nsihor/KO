@@ -1,0 +1,110 @@
+@import url(index.css);
+
+.nd_h {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 55px;
+}
+
+.nd_h_container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 5px;
+}
+
+/*left*/
+
+.nd_h_left {
+    height: 100%;
+}
+
+.nd_h_menu_btn {
+    width: 55px;
+    height: 100%;
+
+    color: #2F5FEB;
+    font-size: 10px;
+    background-color: #fff;
+    border: none;
+    border-right: 1px var(--grey-color) solid;
+}
+
+.nd_h_right {
+}
+
+.nd_h_select {
+    border: none;
+    margin: 18px 0 19px;
+}
+
+.nd_h_select:focus-visible {
+    outline: none;
+}
+
+/*rightTop*/
+
+.nd_h_rightTop {
+    display: none;
+}
+
+.nd_h_impaired_btn {
+}
+
+.nd_h_tel {
+}
+
+/*rightBottom*/
+
+.nd_h_rightBottom {
+    display: none;
+}
+
+.nd_h_pages_list_d {
+}
+
+.nd_current_d {
+}
+
+/*menu*/
+
+.nd_h_menu {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #fff;
+    border-top: 1px var(--grey-color) solid;
+    padding: 33px 0;
+}
+
+.nd_h_pages_list_m {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+
+.nd_current_m {
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .nd_h {
+        position: static;
+    }
+
+    .nd_h_menu {
+        display: none;
+    }
+}
