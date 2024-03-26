@@ -33,8 +33,11 @@
     border-right: 1px var(--grey-color) solid;
 }
 
-.nd_h_right {
+.nd_h_menu_btn svg {
+    margin-bottom: 4px;
 }
+
+/*right*/
 
 .nd_h_select {
     border: none;
@@ -51,10 +54,34 @@
     display: none;
 }
 
-.nd_h_impaired_btn {
+.nd_h_impaired_btn, .nd_h_tel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 18px;
 }
 
 .nd_h_tel {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.nd_h_impaired_btn {
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.nd_blue_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
 }
 
 /*rightBottom*/
@@ -77,15 +104,20 @@
     top: 55px;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    overflow: hidden;
 
+    background-color: #fff;
+    border-top: 1px var(--grey-color) solid;
+}
+
+.nd_h_menu_container{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: #fff;
-    border-top: 1px var(--grey-color) solid;
     padding: 33px 0;
+    max-height: 100%;
+    overflow: auto;
 }
 
 .nd_h_pages_list_m {
@@ -93,6 +125,20 @@
     flex-direction: column;
     gap: 18px;
     text-align: center;
+
+    font-size: 30px;
+    line-height: 125%;
+    color: var(--dark-text-color);
+
+    padding-bottom: 35px;
+}
+
+.nd_h_menu_container .nd_w_btn {
+    margin-bottom: 15px;
+}
+
+.nd_h_menu_container .nd_b_btn {
+    margin-bottom: 35px;
 }
 
 .nd_current_m {

@@ -71,34 +71,40 @@
                     <li><a href="">News</a></li>
                     <li><a href="">Support</a></li>
                 </ul>
-                <button class="nd_w_btn">Login</button>
-                <button class="nd_b_btn">Registration</button>
+                <a class="nd_w_btn">Login</a>
+                <a class="nd_b_btn">Registration</a>
             </div>
         </div>
     </header>
-    <!--            mobile-->
+    <!--            mobile menu-->
     <div data-action="nd-mob-menu" class="nd_h_menu nd_none">
-        <ul class="nd_h_pages_list_m">
-            <li class="nd_current_m"><a href="">Main page</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">Rates</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">Support</a></li>
-        </ul>
-        <button class="nd_w_btn">Login</button>
-        <button class="nd_b_btn">Registration</button>
-        <a class="nd_h_tel" href="tel:+380444816995">
-            <svg>
-                <use href="./img/svg/telephone-fill.svg"></use>
-            </svg>
-            +38 (044) 481-69-95
-        </a>
-        <button class="nd_h_impaired_btn">
-            <svg>
-                <use href="./img/svg/eye-slash.svg"></use>
-            </svg>
-            People with impaired vision
-        </button>
+        <div class="nd_h_menu_container">
+            <ul class="nd_h_pages_list_m">
+                <li class="nd_current_m"><a href="">Main page</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">Rates</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Support</a></li>
+            </ul>
+            <a class="nd_w_btn">Login</a>
+            <a class="nd_b_btn">Registration</a>
+            <a class="nd_h_tel" href="tel:+380444816995">
+                <div class="nd_blue_circle">
+                    <svg width="16" height="16">
+                        <use href="./img/svg/telephone-fill.svg#telephone-fill"></use>
+                    </svg>
+                </div>
+                +38 (044) 481-69-95
+            </a>
+            <button class="nd_h_impaired_btn">
+                <div class="nd_blue_circle">
+                    <svg width="14" height="14">
+                        <use href="./img/svg/eye-slash.svg#eye-slash"></use>
+                    </svg>
+                </div>
+                People with impaired vision
+            </button>
+        </div>
     </div>
 <script src="index.js" type="module"></script>
 </body>
