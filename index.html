@@ -28,9 +28,10 @@
                 </button>
 <!--                desktop-->
                 <a class="nd_h_logo nd_logo_d" href="http://<?php echo $this->site_data->domain; ?>">
-                    <svg width="200" height="200" viewBox="0 0 100 100">
-                        <use href="./img/svg/logo.svg#logo"></use>
+                    <svg width="59" height="23">
+                        <use href="./img/svg/logo-d.svg#logo-d"></use>
                     </svg>
+                    <img src="img/logo-text.png" alt="logo text" width="127" height="23"/>
                 </a>
             </div>
 <!--            mobile-->
@@ -40,39 +41,45 @@
                 </svg>
                 <img src="img/logo-text.png" alt="logo text" width="89" height="16"/>
             </a>
-            <select class="nd_h_select">
+            <select class="nd_h_select_m">
                 <option value="en">EN</option>
                 <option value="ua">UA</option>
             </select>
 <!--            desktop-->
-            <div class="nd_h_rightTop">
-                <button class="nd_h_impaired_btn">
-                    <svg>
-                        <use href="./img/svg/eye-slash.svg"></use>
-                    </svg>
-                    People with impaired vision
-                </button>
-                <a class="nd_h_tel" href="tel:+380444816995">
-                    <svg>
-                        <use href="./img/svg/telephone-fill.svg"></use>
-                    </svg>
-                    +38 (044) 481-69-95
-                </a>
-                <select class="nd_h_select">
-                    <option value="en">English</option>
-                    <option value="ua">Ukrainian</option>
-                </select>
-            </div>
-            <div class="nd_h_rightBottom">
-                <ul class="nd_h_pages_list_d">
-                    <li class="nd_current_d"><a href="">Main page</a></li>
-                    <li><a href="">Contacts</a></li>
-                    <li><a href="">Rates</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Support</a></li>
-                </ul>
-                <a class="nd_w_btn">Login</a>
-                <a class="nd_b_btn">Registration</a>
+            <div class="nd_h_right">
+                <div class="nd_h_rightTop">
+                    <button class="nd_h_impaired_btn">
+                        <div class="nd_blue_circle">
+                            <svg width="14" height="14">
+                                <use href="./img/svg/eye-slash.svg#eye-slash"></use>
+                            </svg>
+                        </div>
+                        People with impaired vision
+                    </button>
+                    <a class="nd_h_tel" href="tel:+380444816995">
+                        <div class="nd_blue_circle">
+                            <svg width="16" height="16">
+                                <use href="./img/svg/telephone-fill.svg#telephone-fill"></use>
+                            </svg>
+                        </div>
+                        +38 (044) 481-69-95
+                    </a>
+                    <select class="nd_h_select">
+                        <option value="en">English</option>
+                        <option value="ua">Ukrainian</option>
+                    </select>
+                </div>
+                <div class="nd_h_rightBottom">
+                    <ul class="nd_h_pages_list_d">
+                        <li class="nd_current"><a href="">Main page</a></li>
+                        <li><a href="">Contacts</a></li>
+                        <li><a href="">Rates</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Support</a></li>
+                    </ul>
+                    <a class="nd_w_btn">Login</a>
+                    <a class="nd_b_btn">Registration</a>
+                </div>
             </div>
         </div>
     </header>
@@ -80,7 +87,7 @@
     <div data-action="nd-mob-menu" class="nd_h_menu nd_none">
         <div class="nd_h_menu_container">
             <ul class="nd_h_pages_list_m">
-                <li class="nd_current_m"><a href="">Main page</a></li>
+                <li class="nd_current"><a href="">Main page</a></li>
                 <li><a href="">Contacts</a></li>
                 <li><a href="">Rates</a></li>
                 <li><a href="">News</a></li>

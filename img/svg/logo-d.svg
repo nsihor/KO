@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="logo-d" fill="none">
+  <path stroke="#2F5FEB" stroke-width="2.25" d="M1.5 1.75h51.375a4.125 4.125 0 1 1 0 8.25H1.5M57 13H5.625a4.125 4.125 0 1 0 0 8.25H57"/>
+  <path fill="#2F5FEB" d="M5.25 4H54v.75H5.25zM53.25 15.25H4.5V16h48.75zM5.25 5.5H54v.75H5.25zM53.25 16.75H4.5v.75h48.75zM5.25 7H54v.75H5.25zM53.25 18.25H4.5V19h48.75z"/>
+</svg>
