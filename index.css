@@ -20,6 +20,10 @@ button {
     font-family: inherit;
 }
 
+select {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -95,5 +99,7 @@ a {
         width: 120px;
         height: 37px;
         min-height: 37px;
+
+        font-size: 11px;
     }
 }

@@ -105,13 +105,12 @@
 
 .nd_h_pages_list_d {
     display: flex;
-    /*margin-right: 58px;*/
-    /*gap: 47px;*/
     margin-right: 40px;
     gap: 42px;
+    font-size: 14px;
 }
 
-.nd_h_pages_list_d li {
+.nd_h_pages_list_d li a{
     padding: 22px 0;
 }
 
@@ -132,11 +131,11 @@
     right: 0;
     height: 4px;
     background: var(--primary-color);
-    border-bottom-right-radius: 10px; /* Радіус закруглення правого нижнього кута */
+    border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-.nd_h_rightBottom, .nd_w_btn {
+.nd_h_rightBottom .nd_w_btn {
     margin-right: 12px;
 }
 
@@ -208,6 +207,19 @@
     
     .nd_h_tel {
         margin: 0;
+    }
+
+    .nd_h_impaired_btn {
+        font-size: 11px;
+    }
+
+    .nd_h_tel {
+        font-size: 10px;
+    }
+
+    .nd_blue_circle {
+        width: 23px;
+        height: 23px;
     }
 }
 
