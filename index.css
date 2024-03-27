@@ -5,6 +5,8 @@
     --dark-grey-color: #67686A;
     --grey-color: #E6E8EB;
     --light-color: #F6F9FB;
+    --bg-light: #FFF;
+    --text-light: #FFF;
 }
 
 body {
@@ -70,7 +72,7 @@ a {
 }
 
 .nd_w_btn {
-    background-color: #fff;
+    background-color: var(--bg-light);
     border: 1px rgba(156, 162, 177, 0.5) solid;
     color: inherit;
 }
@@ -78,7 +80,7 @@ a {
 .nd_b_btn {
     background-color: var(--primary-color);
     border: none;
-    color: #fff;
+    color: var(--text-light);
 }
 
 @media screen and (min-width: 992px) {
