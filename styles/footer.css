@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.nd_f_container {
+    padding: 0 20px;
+}
+
 .nd_f_main {
     display: flex;
     flex-direction: column;
