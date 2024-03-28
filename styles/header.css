@@ -37,6 +37,18 @@
     margin-bottom: 4px;
 }
 
+.nd_h_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 10px 0;
+}
+
+.nd_logo_d {
+    display: none;
+}
+
 /*right*/
 
 .nd_h_select_m, .nd_h_select {
@@ -190,6 +202,15 @@
     .nd_h {
         position: static;
         height: 102px;
+    }
+
+    .nd_logo_m {
+        display: none;
+    }
+
+    .nd_logo_d {
+        display: flex;
+        padding: 25px 31px 29px;
     }
 
     .nd_h_container {
