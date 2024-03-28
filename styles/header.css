@@ -133,6 +133,7 @@
 .nd_current {
     position: relative;
     color: var(--primary-color);
+    box-sizing: border-box;
 }
 
 .nd_h_pages_list_d .nd_current:before {
@@ -231,11 +232,11 @@
     }
 
     .nd_h_impaired_btn {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .nd_h_tel {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .nd_blue_circle {
@@ -248,5 +249,10 @@
     .nd_h_pages_list_d {
         margin-right: 58px;
         gap: 47px;
+        font-size: 18px;
+    }
+
+    .nd_h_pages_list_d li a{
+        padding: 19px 0;
     }
 }

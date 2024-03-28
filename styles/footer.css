@@ -16,7 +16,6 @@
 .nd_f_main h2 {
     font-weight: 400;
     font-size: 18px;
-    line-height: 120%;
     margin-bottom: 32px;
 }
 
@@ -64,15 +63,29 @@
     border-radius: 50%;
 }
 
-.nd_f_contacts p {
-    color: #9CA2B1;
-    font-size: 14px;
-    margin-top: 25px;
+.nd_f_soc_facebook {
+    width: 30px;
+    height: 30px;
 }
 
-.nd_f_contacts a {
-    font-size: 14px;
+.nd_f_soc_youtube {
+    width: 35px;
+    height: 30px;
+}
+
+.nd_f_soc_instagram {
+    width: 30px;
+    height: 30px;
+}
+
+
+.nd_f_contacts p, .nd_f_contacts a {
     color: #9CA2B1;
+    font-size: 14px;
+}
+
+.nd_f_contacts p {
+    margin-top: 25px;
 }
 
 .nd_f_contact_type {
@@ -82,4 +95,89 @@
 
 .nd_f_copyright {
     font-size: 14px;
+}
+
+@media screen and (min-width: 992px) {
+    .nd_f {
+        text-align: start;
+        padding: 60px 0 23px;
+    }
+
+    .nd_f_main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+
+        padding-bottom: 15px;
+    }
+
+    .nd_f_main h2 {
+        /*font-size: 14px;*/
+        margin-bottom: 29px;
+    }
+
+    .nd_f_logo {
+        width: 214px;
+        margin: 0 32px 0 0;
+    }
+
+    .nd_f_menu, .nd_f_docs {
+        padding: 0;
+        max-width: 216px;
+    }
+
+    .nd_f_menu_list, .nd_f_docs_text {
+        gap: 15px;
+        /*font-size: 11px;*/
+    }
+
+    .nd_f_soc {
+        padding-bottom: 45px;
+    }
+
+    .nd_f_soc_list{
+        gap: 15px;
+    }
+
+    .nd_f_soc_link{
+        width: 68px;
+        height: 68px;
+    }
+
+    .nd_f_soc_facebook {
+        width: 23px;
+        height: 23px;
+    }
+
+    .nd_f_soc_youtube {
+        width: 27px;
+        height: 23px;
+    }
+
+    .nd_f_soc_instagram {
+        width: 23px;
+        height: 23px;
+    }
+
+    .nd_f_contacts p, .nd_f_contacts a {
+        /*font-size: 11px;*/
+    }
+
+    .nd_f_contacts p {
+        margin-top: 15px;
+    }
+
+    .nd_f_copyright {
+        /*font-size: 11px;*/
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nd_f_docs {
+        margin-right: 11px;
+    }
+
+    .nd_f_logo {
+        margin-right: 64px;
+    }
 }

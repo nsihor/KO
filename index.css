@@ -95,3 +95,9 @@ p, h1, h2, h3, h4, h5 {
         font-size: 11px;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .nd_w_btn, .nd_b_btn {
+        font-size: 14px;
+    }
+}
