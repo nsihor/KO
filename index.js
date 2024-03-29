@@ -11,5 +11,3 @@ function toggleMenu() {
 burgerBtn.addEventListener('click', toggleMenu);
 
 closeBtn.addEventListener('click', toggleMenu);
-
-console.log('js')
