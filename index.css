@@ -97,6 +97,24 @@ p, h1, h2, h3, h4, h5 {
     background-color: var(--accent-color);
 }
 
+.nd_section_name_wrap {
+}
+
+.nd_section_name_dot {
+}
+
+.nd_section_name {
+}
+
+.nd_section_title {
+}
+
+.nd_arrow_btn_wrap {
+}
+
+.nd_arrow_btn {
+}
+
 @media screen and (min-width: 992px) {
     body {
         padding: 0;

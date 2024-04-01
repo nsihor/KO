@@ -1,3 +1,5 @@
+/*hero*/
+
 .nd_hero {
     padding: 75px 0 225px;
     overflow-x: hidden;
@@ -31,7 +33,23 @@
     max-width: 665px;
 }
 
+/*statistics*/
+
+.nd_statistics {
+}
+
+.nd_statistics_mid {
+}
+
+.nd_statistics_list {
+}
+
+.nd_statistics_item_name {
+}
+
 @media screen and (min-width: 576px) {
+    /*hero*/
+
     .nd_hero_wrap {
         display: flex;
     }
@@ -47,6 +65,8 @@
 }
 
 @media screen and (min-width: 992px) {
+    /*hero*/
+
     .nd_hero {
         padding: 60px 0 150px;
     }
