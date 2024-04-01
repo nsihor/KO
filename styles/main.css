@@ -61,14 +61,15 @@
     }
 
     .nd_hero_text {
-        font-size: 24px;
+        font-size: 18px;
+        width: auto;
     }
 
     .nd_hero_img {
         background-image: url(../img/hero_d.png);
-        height: 626px;
-        width: calc(100% + 214px);
-        max-width: 703px;
-        margin-left: 42px;
+        height: 696px;
+        width: calc(100% + 183px);
+        max-width: 780px;
+        margin-left: -35px;
     }
 }
