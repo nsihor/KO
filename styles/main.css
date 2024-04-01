@@ -1,5 +1,6 @@
 .nd_hero {
     padding: 75px 0 225px;
+    overflow-x: hidden;
 }
 
 .nd_hero_main {
@@ -24,7 +25,50 @@
     background-image: url(../img/hero_m.png);
     background-size: cover;
 
-    width: calc(100% + 15px);
+    width: calc(100% + 80px);
+    margin-left: -65px;
     height: 439px;
     max-width: 665px;
+}
+
+@media screen and (min-width: 576px) {
+    .nd_hero_wrap {
+        display: flex;
+    }
+
+    .nd_hero_main {
+        width: 50%;
+        padding: 40px 0 0;
+    }
+
+    .nd_hero_img_wrap {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nd_hero {
+        padding: 60px 0 150px;
+    }
+
+    .nd_hero_main {
+        padding-top: 140px;
+    }
+
+    .nd_hero_title {
+        max-width: 518px;
+        font-size: 66px;
+    }
+
+    .nd_hero_text {
+        font-size: 24px;
+    }
+
+    .nd_hero_img {
+        background-image: url(../img/hero_d.png);
+        height: 626px;
+        width: calc(100% + 214px);
+        max-width: 703px;
+        margin-left: 42px;
+    }
 }

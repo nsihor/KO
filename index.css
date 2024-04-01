@@ -103,7 +103,7 @@ p, h1, h2, h3, h4, h5 {
     }
 
     .nd_container {
-        padding: 0 48px;
+        padding: 0 148px;
     }
 
     .nd_w_btn, .nd_b_btn, .nd_y_btn {
@@ -119,11 +119,12 @@ p, h1, h2, h3, h4, h5 {
     .nd_y_btn {
         max-width: 218px;
         height: 68px;
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .nd_w_btn, .nd_b_btn, .nd_y_btn {
+    .nd_w_btn, .nd_b_btn {
         font-size: 14px;
     }
 }
