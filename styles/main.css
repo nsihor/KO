@@ -58,8 +58,6 @@
 
     box-sizing: border-box;
     min-width: 323px;
-    max-width: 323px;
-    width: 323px;
     height: 300px;
     padding: 57px 20px 36px;
 
@@ -132,4 +130,31 @@
         max-width: 780px;
         margin-left: -35px;
     }
+
+    .nd_statistics {
+        padding-bottom: 200px;
+    }
+
+    .nd_statistics_mid {
+        display: flex;
+        align-items: center;
+        gap: 246px;
+    }
+
+    .nd_statistics_list {
+        width: calc(100% + 148px);
+    }
+
+    .nd_statistics_card {
+        min-width: 422px;
+    }
+
+    .nd_statistics_item_dig {
+        font-size: 86px;
+    }
+
+    .nd_statistics_item_name {
+        font-size: 24px;
+    }
+
 }

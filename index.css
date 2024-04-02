@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5 {
     gap: 30px;
 }
 
-.nd_arrow_btn_left, .nd_arrow_btn_right {
+.nd_arrow_btn, .nd_arrow_btn {
     width: 60px;
     height: 60px;
     border: 1px var(--primary-color) solid;
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5 {
     background-color: transparent;
 }
 
-.nd_arrow_btn_left:disabled, .nd_arrow_btn_right:disabled {
+.nd_arrow_btn:disabled, .nd_arrow_btn:disabled {
     border-color: var(--grey-color);
 }
 
@@ -169,10 +169,20 @@ h1, h2, h3, h4, h5 {
         height: 68px;
         font-size: 18px;
     }
+
+    .nd_section_title {
+        font-size: 45px;
+        width: 491px;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
     .nd_w_btn, .nd_b_btn {
         font-size: 14px;
+    }
+
+    .nd_section_title {
+        font-size: 60px;
     }
 }
