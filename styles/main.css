@@ -66,6 +66,10 @@
     border-radius: 12px;
 }
 
+.nd_statistics_card:last-child {
+    margin-right: 20px;
+}
+
 .nd_statistics_item_dig {
     font-weight: 500;
     font-size: 64px;
@@ -138,15 +142,21 @@
     .nd_statistics_mid {
         display: flex;
         align-items: center;
-        gap: 246px;
+        justify-content: space-between;
     }
 
     .nd_statistics_list {
+        overflow-x: hidden;
         width: calc(100% + 148px);
+        gap: 51px;
     }
 
     .nd_statistics_card {
         min-width: 422px;
+    }
+
+    .nd_statistics_card:last-child {
+        margin-right: 51px;
     }
 
     .nd_statistics_item_dig {
