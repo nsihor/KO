@@ -186,8 +186,8 @@
     gap: 18px;
 
     width: 100%;
-    height: 190px;
-    padding: 54px 10px 0;
+    min-height: 190px;
+    padding: 54px 10px;
     border-radius: 12px;
     box-sizing: border-box;
 
@@ -221,10 +221,6 @@
 .nd_benefits_card_pic_check {
     background-image: url(../img/check-m.png);
     background-position: center;
-}
-
-.nd_benefits_card_main {
-
 }
 
 .nd_benefits_card_title {
@@ -360,4 +356,66 @@
         letter-spacing: 1px;
     }
 
+    /*benefits*/
+
+    .nd_benefits_title {
+        margin-bottom: 75px;
+    }
+
+    .nd_benefits_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 37px;
+    }
+
+    .nd_benefits_card {
+        gap: 46px;
+
+        min-height: 188px;
+        padding: 47px 41px;
+    }
+
+    .nd_benefits_card_pic_clock, .nd_benefits_card_pic_tool, .nd_benefits_card_pic_cursor, .nd_benefits_card_pic_check {
+        min-width: 114px;
+        height: 114px;
+    }
+
+    .nd_benefits_card_pic_clock {
+        background-image: url(../img/clock-d.png);
+        background-position: center;
+    }
+
+    .nd_benefits_card_pic_tool {
+        background-image: url(../img/tool-d.png);
+            background-position: center;
+    }
+
+    .nd_benefits_card_pic_cursor {
+        background-image: url(../img/cursor-d.png);
+            background-position: center;
+    }
+
+    .nd_benefits_card_pic_check {
+        background-image: url(../img/check-d.png);
+            background-position: center;
+    }
+
+    .nd_benefits_card_title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .nd_benefits_card_text {
+        font-size: 18px;
+        line-height: 140%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nd_benefits_list {
+
+    }
+    .nd_benefits_card {
+        width: calc(50% - 19px);
+    }
 }
