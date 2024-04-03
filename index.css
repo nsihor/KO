@@ -101,6 +101,14 @@ h1, h2, h3, h4, h5 {
     background-color: var(--accent-color);
 }
 
+.nd_section {
+    padding-bottom: 120px;
+}
+
+.nd_section_mid {
+    padding-bottom: 50px;
+}
+
 .nd_section_name_wrap {
     display: flex;
     align-items: center;
@@ -170,9 +178,19 @@ h1, h2, h3, h4, h5 {
         font-size: 18px;
     }
 
+    .nd_section {
+        padding-bottom: 200px;
+    }
+
+    .nd_section_mid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .nd_section_title {
         font-size: 45px;
-        width: 491px;
+        max-width: 491px;
     }
 
 }

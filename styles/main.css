@@ -35,14 +35,6 @@
 
 /*statistics*/
 
-.nd_statistics {
-    padding-bottom: 120px;
-}
-
-.nd_statistics_mid {
-    padding-bottom: 50px;
-}
-
 .nd_statistics_list {
     display: flex;
     gap: 20px;
@@ -87,6 +79,97 @@
     width: 100%;
 
     border-top: 1px #E1E4E9 solid;
+}
+
+/*blog*/
+
+.nd_blog_list {
+    display: flex;
+    gap: 19px;
+    overflow-x: hidden;
+    width: calc(100% + 15px);
+    margin-bottom: 75px;
+}
+
+.nd_blog_card {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    min-width: 324px;
+    height: 541px;
+
+    background-color: var(--bg-light);
+    border: 1px #CDD0D880 solid;
+    border-radius: 12px;
+}
+
+.nd_blog_card_img1, .nd_blog_card_img2 {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+}
+
+.nd_blog_card_img1 {
+    background-image: url(../img/news1.jpg);
+}
+
+.nd_blog_card_img2 {
+    background-image: url(../img/news2.jpg);
+}
+
+.nd_blog_card_bottom {
+    box-sizing: border-box;
+    padding: 35px 18px;
+}
+
+.nd_blog_card_date {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.9px;
+}
+
+.nd_blog_card_main_text {
+    margin: 20px 0 8px;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+}
+
+.nd_blog_card_additional_text {
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    color: var(--dark-grey-color);
+    margin-bottom: 27px;
+}
+
+.nd_blog_card_link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.nd_blog_card_link_svg_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.nd_blog_news_btn_m {
+}
+
+.nd_blog_news_btn_d {
+    display: none;
 }
 
 @media screen and (min-width: 576px) {
@@ -135,16 +218,6 @@
         margin-left: -35px;
     }
 
-    .nd_statistics {
-        padding-bottom: 200px;
-    }
-
-    .nd_statistics_mid {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     .nd_statistics_list {
         overflow-x: hidden;
         width: calc(100% + 148px);
@@ -167,4 +240,13 @@
         font-size: 24px;
     }
 
+    /*blog*/
+
+    .nd_blog_news_btn_d {
+        display: block;
+    }
+
+    .nd_blog_news_btn_m {
+        display: none;
+    }
 }
