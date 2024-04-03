@@ -37,6 +37,15 @@ function updateButtonsState(btnLeft, btnRight, list) {
     btnRight.disabled = list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1);
 }
 
+function calculateStep(list) {
+    const firstChild = list.querySelector(':first-child');
+    const firstChildWidth = firstChild.offsetWidth;
+    const secondChild = firstChild.nextElementSibling;
+    const gap = secondChild.getBoundingClientRect().left - firstChild.getBoundingClientRect().right;
+
+    return firstChildWidth + gap
+}
+
 // statistics slider
 
 const statisticsList = document.querySelector('[data-action="nd-statistic-list"]');
@@ -44,7 +53,7 @@ const statisticsLeftButton = document.querySelector('[data-action="nd-statistic-
 const statisticsRightButton = document.querySelector('[data-action="nd-statistic-btn-right"]');
 
 let statisticsScrollAmount = 0;
-const statisticsStep = 343;
+const statisticsStep = calculateStep(statisticsList);
 
 statisticsRightButton.addEventListener('click', function() {
     if (statisticsList.scrollLeft <= (statisticsList.scrollWidth - statisticsList.clientWidth - 1)) {
