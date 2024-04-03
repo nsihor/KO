@@ -259,8 +259,13 @@
         height: 285px;
     }
 
+    .nd_blog_card:last-child {
+        margin-right: 38px;
+    }
+
     .nd_blog_card_img1, .nd_blog_card_img2 {
         height: auto;
+        min-width: 285px;
         background-position: center;
         border-radius: 12px;
     }

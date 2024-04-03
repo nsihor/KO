@@ -71,3 +71,29 @@ statisticsLeftButton.addEventListener('click', function() {
 statisticsList.addEventListener('scroll', function() {
     updateButtonsState(statisticsLeftButton, statisticsRightButton, statisticsList)
 });
+
+// blog slider
+
+const blogList = document.querySelector('[data-action="nd-blog-list"]');
+const blogLeftButton = document.querySelector('[data-action="nd-blog-btn-left"]');
+const blogRightButton = document.querySelector('[data-action="nd-blog-btn-right"]');
+
+let blogScrollAmount = 0;
+const blogStep = calculateStep(blogList);
+
+blogRightButton.addEventListener('click', function() {
+    if (blogList.scrollLeft <= (blogList.scrollWidth - blogList.clientWidth - 1)) {
+        blogScrollAmount += blogStep;
+        sliderIncrease(blogList, blogScrollAmount);
+    }
+});
+
+
+blogLeftButton.addEventListener('click', function() {
+    if (blogScrollAmount > 0) blogScrollAmount -= blogStep
+    sliderDecrease(blogList, blogScrollAmount)
+});
+
+blogList.addEventListener('scroll', function() {
+    updateButtonsState(blogLeftButton, blogRightButton, blogList)
+});
