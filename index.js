@@ -60,7 +60,15 @@ function calculateStep(list) {
     return firstChildWidth + gap
 }
 
-function createSlider(list, leftBtn, rightBtn) {
+function createSlider(name) {
+    const list = document.querySelector(`[data-action="nd-${name}-list"]`);
+    const leftBtn = document.querySelector(`[data-action="nd-${name}-btn-left"]`);
+    const rightBtn = document.querySelector(`[data-action="nd-${name}-btn-right"]`);
+
+    console.log('list', list)
+    console.log('leftBtn', leftBtn)
+    console.log('rightBtn', rightBtn)
+
     let scrollAmount = 0;
     const step = calculateStep(list);
 
@@ -89,16 +97,12 @@ function createSlider(list, leftBtn, rightBtn) {
 
 // statistics slider
 
-const statisticsList = document.querySelector('[data-action="nd-statistic-list"]');
-const statisticsLeftButton = document.querySelector('[data-action="nd-statistic-btn-left"]');
-const statisticsRightButton = document.querySelector('[data-action="nd-statistic-btn-right"]');
-
-createSlider(statisticsList, statisticsLeftButton, statisticsRightButton)
+createSlider('statistics')
 
 // blog slider
 
-const blogList = document.querySelector('[data-action="nd-blog-list"]');
-const blogLeftButton = document.querySelector('[data-action="nd-blog-btn-left"]');
-const blogRightButton = document.querySelector('[data-action="nd-blog-btn-right"]');
+createSlider('blog')
 
-createSlider(blogList, blogLeftButton, blogRightButton)
+// sites slider
+
+createSlider('sites')
