@@ -3,7 +3,6 @@
 const burgerBtn = document.querySelector('[data-action="nd-burger"]');
 const closeBtn = document.querySelector('[data-action="nd-close"]');
 const mobMenu = document.querySelector('[data-action="nd-mob-menu"]')
-const body = document.querySelector("body")
 
 function toggleBodyScroll() {
     if (document.body.style.overflow === 'hidden') {
@@ -43,9 +42,13 @@ function sliderDecrease(list, scrollAmount) {
     });
 }
 
+function isEndOfSlider(list) {
+    return list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1)
+}
+
 function updateButtonsState(btnLeft, btnRight, list) {
     btnLeft.disabled = list.scrollLeft === 0;
-    btnRight.disabled = list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1);
+    btnRight.disabled = isEndOfSlider(list);
 }
 
 function calculateStep(list) {
@@ -57,31 +60,41 @@ function calculateStep(list) {
     return firstChildWidth + gap
 }
 
+function createSlider(list, leftBtn, rightBtn) {
+    let scrollAmount = 0;
+    const step = calculateStep(list);
+
+    let lastScrollTime = 0;
+    const minScrollInterval = 500;
+
+    rightBtn.addEventListener('click', function() {
+        const currentTime = performance.now();
+
+        if (currentTime - lastScrollTime > minScrollInterval) {
+            scrollAmount += step;
+            sliderIncrease(list, scrollAmount);
+            lastScrollTime = currentTime;
+        }
+    });
+
+    leftBtn.addEventListener('click', function() {
+        if (scrollAmount > 0) scrollAmount -= step
+        sliderDecrease(list, scrollAmount)
+        console.log('scrollAmount', scrollAmount)
+    });
+
+    list.addEventListener('scroll', function() {
+        updateButtonsState(leftBtn, rightBtn, list)
+    });
+}
+
 // statistics slider
 
 const statisticsList = document.querySelector('[data-action="nd-statistic-list"]');
 const statisticsLeftButton = document.querySelector('[data-action="nd-statistic-btn-left"]');
 const statisticsRightButton = document.querySelector('[data-action="nd-statistic-btn-right"]');
 
-let statisticsScrollAmount = 0;
-const statisticsStep = calculateStep(statisticsList);
-
-statisticsRightButton.addEventListener('click', function() {
-    if (statisticsList.scrollLeft <= (statisticsList.scrollWidth - statisticsList.clientWidth - 1)) {
-        statisticsScrollAmount += statisticsStep;
-        sliderIncrease(statisticsList, statisticsScrollAmount);
-    }
-});
-
-
-statisticsLeftButton.addEventListener('click', function() {
-    if (statisticsScrollAmount > 0) statisticsScrollAmount -= statisticsStep
-    sliderDecrease(statisticsList, statisticsScrollAmount)
-});
-
-statisticsList.addEventListener('scroll', function() {
-    updateButtonsState(statisticsLeftButton, statisticsRightButton, statisticsList)
-});
+createSlider(statisticsList, statisticsLeftButton, statisticsRightButton)
 
 // blog slider
 
@@ -89,22 +102,4 @@ const blogList = document.querySelector('[data-action="nd-blog-list"]');
 const blogLeftButton = document.querySelector('[data-action="nd-blog-btn-left"]');
 const blogRightButton = document.querySelector('[data-action="nd-blog-btn-right"]');
 
-let blogScrollAmount = 0;
-const blogStep = calculateStep(blogList);
-
-blogRightButton.addEventListener('click', function() {
-    if (blogList.scrollLeft <= (blogList.scrollWidth - blogList.clientWidth - 1)) {
-        blogScrollAmount += blogStep;
-        sliderIncrease(blogList, blogScrollAmount);
-    }
-});
-
-
-blogLeftButton.addEventListener('click', function() {
-    if (blogScrollAmount > 0) blogScrollAmount -= blogStep
-    sliderDecrease(blogList, blogScrollAmount)
-});
-
-blogList.addEventListener('scroll', function() {
-    updateButtonsState(blogLeftButton, blogRightButton, blogList)
-});
+createSlider(blogList, blogLeftButton, blogRightButton)
