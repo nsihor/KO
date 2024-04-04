@@ -279,6 +279,7 @@
     width: 100%;
     min-height: 327px;
     padding: 10px 35px;
+    box-sizing: border-box;
 }
 
 .nd_services_img_wrap{
@@ -511,17 +512,53 @@
         font-size: 24px;
         line-height: 125%;
     }
+
+    /*services*/
+
+    .nd_services_card {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 33px;
+
+        min-height: 225px;
+        padding: 27px 34px;
+    }
+
+    .nd_services_img_wrap {
+        min-width: 168px;
+        height: 168px;
+        margin: 0;
+    }
+
+    .nd_services_img_diaries {
+        width: 106px;
+        height: 64px;
+    }
+
+    .nd_services_img_laptop {
+        width: 102px;
+        height: 77px;
+    }
+
+    .nd_services_img_block {
+        width: 68px;
+        height: 77px;
+    }
+
+    .nd_services_img_folder {
+        width: 91px;
+        height: 77px;
+    }
+
+    .nd_services_card_text {
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
-    .nd_benefits_list {
-
-    }
-    .nd_benefits_card {
-        width: calc(50% - 19px);
-    }
-
-    .nd_services_card {
+    .nd_benefits_card, .nd_services_card  {
         width: calc(50% - 19px);
     }
 }
