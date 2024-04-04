@@ -26,29 +26,17 @@ closeBtn.addEventListener('click', toggleMenu);
 
 // slider
 
-function sliderIncrease(list, scrollAmount) {
+function sliderScroll(list, scrollAmount) {
     list.scrollTo({
         top: 0,
         left: scrollAmount,
         behavior: 'smooth'
     });
-}
-
-function sliderDecrease(list, scrollAmount) {
-    list.scrollTo({
-        top: 0,
-        left: scrollAmount,
-        behavior: 'smooth'
-    });
-}
-
-function isEndOfSlider(list) {
-    return list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1)
 }
 
 function updateButtonsState(btnLeft, btnRight, list) {
     btnLeft.disabled = list.scrollLeft === 0;
-    btnRight.disabled = isEndOfSlider(list);
+    btnRight.disabled = list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1);
 }
 
 function calculateStep(list) {
@@ -60,14 +48,16 @@ function calculateStep(list) {
     return firstChildWidth + gap
 }
 
-function createSlider(name) {
+function findSliderElements(name) {
     const list = document.querySelector(`[data-action="nd-${name}-list"]`);
     const leftBtn = document.querySelector(`[data-action="nd-${name}-btn-left"]`);
     const rightBtn = document.querySelector(`[data-action="nd-${name}-btn-right"]`);
 
-    console.log('list', list)
-    console.log('leftBtn', leftBtn)
-    console.log('rightBtn', rightBtn)
+    return {list, leftBtn, rightBtn};
+}
+
+function createSlider(name) {
+    const {list, leftBtn, rightBtn} = findSliderElements(name)
 
     let scrollAmount = 0;
     const step = calculateStep(list);
@@ -80,14 +70,14 @@ function createSlider(name) {
 
         if (currentTime - lastScrollTime > minScrollInterval) {
             scrollAmount += step;
-            sliderIncrease(list, scrollAmount);
+            sliderScroll(list, scrollAmount);
             lastScrollTime = currentTime;
         }
     });
 
     leftBtn.addEventListener('click', function() {
         if (scrollAmount > 0) scrollAmount -= step
-        sliderDecrease(list, scrollAmount)
+        sliderScroll(list, scrollAmount)
     });
 
     list.addEventListener('scroll', function() {
