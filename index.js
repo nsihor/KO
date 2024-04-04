@@ -65,7 +65,7 @@ function createSlider(list, leftBtn, rightBtn) {
     const step = calculateStep(list);
 
     let lastScrollTime = 0;
-    const minScrollInterval = 500;
+    const minScrollInterval = 400;
 
     rightBtn.addEventListener('click', function() {
         const currentTime = performance.now();
@@ -80,7 +80,6 @@ function createSlider(list, leftBtn, rightBtn) {
     leftBtn.addEventListener('click', function() {
         if (scrollAmount > 0) scrollAmount -= step
         sliderDecrease(list, scrollAmount)
-        console.log('scrollAmount', scrollAmount)
     });
 
     list.addEventListener('scroll', function() {
