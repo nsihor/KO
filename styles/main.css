@@ -273,6 +273,52 @@
     line-height: 20px;
 }
 
+/*services*/
+
+.nd_services_card{
+    width: 100%;
+    min-height: 327px;
+    padding: 10px 35px;
+}
+
+.nd_services_img_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 75px;
+    height: 75px;
+    margin-bottom: 21px;
+
+    border: 1px var(--grey-color) solid;
+    border-radius: 50%;
+}
+
+.nd_services_img_diaries {
+    width: 47px;
+    height: 28px;
+}
+
+.nd_services_img_laptop {
+    width: 45px;
+    height: 34px;
+}
+
+.nd_services_img_block {
+    width: 38px;
+    height: 43px;
+}
+
+.nd_services_img_folder {
+    width: 45px;
+    height: 36px;
+}
+
+
+.nd_services_card_text {
+    margin-bottom: 32px;
+}
+
 @media screen and (min-width: 576px) {
     /*hero*/
 
@@ -472,6 +518,10 @@
 
     }
     .nd_benefits_card {
+        width: calc(50% - 19px);
+    }
+
+    .nd_services_card {
         width: calc(50% - 19px);
     }
 }
