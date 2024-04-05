@@ -423,7 +423,7 @@
 }
 
 .nd_rates_card_link {
-    width: 324px;
+    max-width: 324px;
     height: 90px;
 
     font-size: 18px;
