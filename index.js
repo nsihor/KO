@@ -85,14 +85,12 @@ function createSlider(name) {
     });
 }
 
-// statistics slider
+// slider creating
 
 createSlider('statistics')
 
-// blog slider
-
 createSlider('blog')
 
-// sites slider
-
 createSlider('sites')
+
+createSlider('reviews')
