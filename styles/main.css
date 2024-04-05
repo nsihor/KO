@@ -395,7 +395,9 @@
 
 .nd_rates_card1_img {
     width: 96vw;
+    max-width: 630px;
     height: 50vw;
+    max-height: 328px;
     margin: 4px 0 42px;
 }
 
@@ -409,13 +411,14 @@
 
 .nd_rates_card2_title {
     color: var(--text-light);
-    margin-bottom: 31px;
 }
 
 .nd_rates_card2_img {
     width: 95vw;
+    max-width: 625px;
     height: 58vw;
-    margin-bottom: 24px;
+    max-height: 381px;
+    margin: 31px 0 24px;
 }
 
 .nd_rates_card2_text {
@@ -705,48 +708,56 @@
 /*rates*/
 
     .nd_rates {
+        padding-bottom: 200px;
     }
 
     .nd_rates_cards_wrap {
+        flex-direction: row;
+        gap: 3%;
     }
 
     .nd_rates_card1, .nd_rates_card2 {
+        padding: 49px 20px 70px;
     }
 
     .nd_rates_card1_title, .nd_rates_card2_title {
-    }
-
-    .nd_rates_card1_img, .nd_rates_card2_img {
+        font-size: 60px;
+        line-height: 75px;
     }
 
     .nd_rates_card1_text, .nd_rates_card2_text {
+        font-size: 18px;
+        line-height: 25.2px;
+        margin-bottom: 47px;
+    }
+    .nd_rates_card1_img, .nd_rates_card2_img {
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .nd_rates_card1 {
-    }
-
-    .nd_rates_card1_title {
+        width: 39%;
     }
 
     .nd_rates_card1_img {
-    }
-
-    .nd_rates_card1_text {
+        width: 35vw;
+        height: 18vw;
+        margin: 53px 29px;
     }
 
     .nd_rates_card2 {
-    }
-
-    .nd_rates_card2_title {
+        width: 59%;
     }
 
     .nd_rates_card2_img {
-    }
-
-    .nd_rates_card2_text {
+        width: 40vw;
+        height: 24.5vw;
+        margin: 9px 0 -2px;
     }
 
     .nd_rates_card_link {
+        width: 100%;
+        max-width: 290px;
     }
 }
 
