@@ -329,6 +329,10 @@
     width: calc(100% + 15px);
 }
 
+.nd_reviews_list:last-child {
+    margin-right: 19px;
+}
+
 .nd_reviews_card {
     min-width: 324px;
     height: 469px;
@@ -591,6 +595,42 @@
     .nd_services_card_text {
         margin-bottom: 20px;
     }
+
+    /*reviews*/
+
+    .nd_reviews_list {
+        gap: 38px;
+        width: calc(100% + 148px);
+    }
+
+    .nd_reviews_list:last-child {
+        margin-right: 38px;
+    }
+
+    .nd_reviews_card {
+        display: flex;
+        flex-direction: row;
+        gap: 23px;
+
+        min-width: 737px;
+        height: 326px;
+        padding: 25px 39px;
+    }
+
+    .nd_card_img_wrap {
+        align-items: center;
+        width: 200px;
+        margin-bottom: 0;
+    }
+
+    .nd_reviews_card_title {
+        margin-top: 10px;
+    }
+
+    .nd_reviews_card_text {
+
+    }
+
 
 }
 
