@@ -360,6 +360,77 @@
     line-height: 16.8px;
 }
 
+/*rates*/
+
+.nd_rates_cards_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.nd_rates_card1, .nd_rates_card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 75px 10px;
+}
+
+.nd_rates_card1_title, .nd_rates_card2_title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+}
+
+.nd_rates_card1_text, .nd_rates_card2_text {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.003em;
+    margin-bottom: 47px;
+}
+
+.nd_rates_card1_img {
+    width: 96vw;
+    height: 50vw;
+    margin: 4px 0 42px;
+}
+
+.nd_rates_card1_text {
+    color: var(--dark-grey-color);
+}
+
+.nd_rates_card2 {
+    background: linear-gradient(126.98deg, rgba(0, 82, 212, 0.95) -2.89%, rgba(67, 100, 247, 0.95) 53.4%, rgba(111, 177, 252, 0.95) 109.69%);
+}
+
+.nd_rates_card2_title {
+    color: var(--text-light);
+    margin-bottom: 31px;
+}
+
+.nd_rates_card2_img {
+    width: 95vw;
+    height: 58vw;
+    margin-bottom: 24px;
+}
+
+.nd_rates_card2_text {
+    color: var(--text-light);
+}
+
+.nd_rates_card_link {
+    width: 324px;
+    height: 90px;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+}
 
 @media screen and (min-width: 576px) {
     /*hero*/
@@ -631,7 +702,52 @@
 
     }
 
+/*rates*/
 
+    .nd_rates {
+    }
+
+    .nd_rates_cards_wrap {
+    }
+
+    .nd_rates_card1, .nd_rates_card2 {
+    }
+
+    .nd_rates_card1_title, .nd_rates_card2_title {
+    }
+
+    .nd_rates_card1_img, .nd_rates_card2_img {
+    }
+
+    .nd_rates_card1_text, .nd_rates_card2_text {
+    }
+
+    .nd_rates_card1 {
+    }
+
+    .nd_rates_card1_title {
+    }
+
+    .nd_rates_card1_img {
+    }
+
+    .nd_rates_card1_text {
+    }
+
+    .nd_rates_card2 {
+    }
+
+    .nd_rates_card2_title {
+    }
+
+    .nd_rates_card2_img {
+    }
+
+    .nd_rates_card2_text {
+    }
+
+    .nd_rates_card_link {
+    }
 }
 
 @media screen and (min-width: 1200px) {
