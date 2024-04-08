@@ -48,7 +48,6 @@
     justify-content: space-between;
     align-items: center;
 
-    box-sizing: border-box;
     min-width: 323px;
     height: 300px;
     padding: 57px 20px 36px;
@@ -95,7 +94,6 @@
     display: flex;
     flex-direction: column;
 
-    box-sizing: border-box;
     min-width: 324px;
     height: 541px;
 
@@ -119,7 +117,6 @@
 }
 
 .nd_blog_card_bottom {
-    box-sizing: border-box;
     padding: 35px 18px;
 }
 
@@ -263,7 +260,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    box-sizing: border-box;
     height: 172px;
     padding: 35px 18px;
 }
@@ -279,7 +275,6 @@
     width: 100%;
     min-height: 327px;
     padding: 10px 35px;
-    box-sizing: border-box;
 }
 
 .nd_services_img_wrap{
@@ -433,6 +428,41 @@
     font-weight: 500;
     line-height: 25px;
     letter-spacing: 1.5px;
+}
+
+/*registration*/
+
+.nd_registration {
+    margin-top: -12px;
+    padding-bottom: 120px;
+}
+
+.nd_registration_wrap {
+}
+
+.nd_registration_img_wrap {
+    width: 100%;
+}
+
+.nd_registration_img {
+    background-image: url(../img/reg_w_m.png);
+    background-repeat: no-repeat;
+
+    width: 446px;
+    height: 420px;
+}
+
+.nd_registration_form {
+    width: 346px;
+    padding: 75px 10px;
+}
+
+.nd_registration_form_title {
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.nd_registration_input {
 }
 
 @media screen and (min-width: 576px) {

@@ -10,6 +10,10 @@
     --border-color: #CDD0D880;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Inter", sans-serif;
     padding-top: 55px;
@@ -62,7 +66,6 @@ h1, h2, h3, h4, h5 {
 .nd_card {
     border: 1px var(--border-color) solid;
     border-radius: 12px;
-    box-sizing: border-box;
     background-color: #fff;
 }
 
@@ -145,6 +148,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
     font-size: 30px;
     margin-bottom: 21px;
+    line-height: 37.5px;
 }
 
 .nd_arrow_btn_wrap {
@@ -203,6 +207,7 @@ h1, h2, h3, h4, h5 {
     .nd_section_title {
         font-size: 45px;
         max-width: 491px;
+        line-height: 75px;
     }
 
     .nd_arrow_btn_wrap {
