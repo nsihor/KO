@@ -553,10 +553,21 @@
                     </div>
                     <form action="" class="nd_registration_form nd_card">
                         <h3 class="nd_section_title nd_registration_form_title">Registration of an <span class="nd_accent_text">educational institution</span></h3>
-                        <input type="text" class="nd_registration_input" placeholder="The name of the institution" >
-                        <input type="text" class="nd_registration_input" placeholder="E-mail">
-                        <input type="text" class="nd_registration_input" placeholder="Phone">
-                        <button class="nd_y_btn">Registration</button>
+                        <label class="nd_registration_label">
+                            The name of the institution
+                            <input name="name" type="text" class="nd_registration_input">
+                        </label>
+                        <label class="nd_registration_label">
+                            E-mail
+                            <input name="email" type="text" class="nd_registration_input">
+                        </label>
+                        <label class="nd_registration_label nd_registration_label_last">
+                            Phone
+                            <input name="phone" type="text" class="nd_registration_input">
+                        </label>
+                        <div class="nd_registration_btn_wrap">
+                            <button class="nd_y_btn">Registration</button>
+                        </div>
                     </form>
                 </div>
             </div>
