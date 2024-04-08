@@ -437,9 +437,6 @@
     overflow: hidden;
 }
 
-.nd_registration_wrap {
-}
-
 .nd_registration_img_wrap {
     position: relative;
     height: 420px;
@@ -486,6 +483,7 @@
 
     border: none;
     border-bottom: 1px #9CA2B140 solid;
+    outline: none;
 }
 
 .nd_registration_btn_wrap {
@@ -766,7 +764,7 @@
 /*rates*/
 
     .nd_rates {
-        padding-bottom: 200px;
+        padding-bottom: 150px;
     }
 
     .nd_rates_cards_wrap {
@@ -817,10 +815,63 @@
         width: 100%;
         max-width: 290px;
     }
+
+    /*registration*/
+
+    .nd_registration {
+        padding-bottom: 150px;
+    }
+
+    .nd_registration_wrap {
+        display: flex;
+    }
+
+    .nd_registration_img_wrap {
+        width: 32%;
+    }
+
+    .nd_registration_img {
+        background-image: url(../img/reg_w_d.png);
+        top: 0;
+        right: -72px;
+
+        width: 767px;
+        height: 825px;
+        margin-right: 0;
+    }
+
+    .nd_registration_form {
+        width: 68%;
+        min-height: 825px;
+        padding: 50px 45px 50px 65px;
+    }
+
+    .nd_registration_form_title {
+        width: 100%;
+        margin-left: 19px;
+        text-align: left;
+    }
+
+    .nd_registration_label {
+        margin-bottom: 43px;
+    }
+
+    .nd_registration_label_last {
+        margin-bottom: 70px;
+    }
+
+    .nd_registration_btn_wrap {
+        justify-content: left;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
     .nd_benefits_card, .nd_services_card  {
         width: calc(50% - 19px);
+    }
+
+    .nd_registration_form {
+        padding: 100px 90px 100px 130px;
     }
 }
