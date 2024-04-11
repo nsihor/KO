@@ -493,12 +493,6 @@
 
 /*coverage*/
 
-.nd_coverage_title {
-}
-
-.nd_coverage_main {
-}
-
 .nd_coverage_dropdown {
     position: relative;
 }
@@ -515,7 +509,6 @@
 
     font-size: 14px;
     line-height: 28px;
-    color: inherit;
 }
 
 .nd_coverage_dropdown_button span {
@@ -556,24 +549,32 @@
     display: block;
 }
 
-.nd_coverage_dropdown_list_item {
-    background-color: #fff;
+.nd_coverage_dropdown_list li {
     border: 1px solid var(--border-color);
     border-bottom: 0px;
-    padding: 13px 20px;
-    cursor: pointer;
 }
 
-.nd_coverage_dropdown_list_item:first-child {
-    border-radius: 6px 6px 0 0;
+.nd_coverage_dropdown_list li:first-child {
+    border-radius: 12px 12px 0 0;
 }
 
-.nd_coverage_dropdown_list_item:last-child {
-    border-radius: 0 0 6px 6px;
+.nd_coverage_dropdown_list li:last-child {
+    border-radius: 0 0 12px 12px;
     border-bottom: 1px solid var(--border-color);
 }
 
+.nd_coverage_dropdown_list_item {
+    background-color: #fff;
+    text-align: left;
+
+    border: none;
+    padding: 13px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
 .nd_coverage_map {
+    width: 100%;
 }
 
 @media screen and (min-width: 576px) {
@@ -949,6 +950,67 @@
         justify-content: left;
     }
 
+    /*coverage*/
+
+    .nd_coverage_title {
+        max-width: 602px;
+    }
+
+    .nd_coverage_text {
+        max-width: 435px;
+    }
+
+    .nd_coverage_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nd_coverage_dropdown {
+        width: 38%;
+    }
+
+    .nd_coverage_dropdown_button {
+        display: none;
+    }
+
+    .nd_coverage_dropdown_button_dig {
+        font-weight: 500;
+    }
+
+    .nd_coverage_dropdown_list {
+        position: static;
+        display: block;
+        background-color: inherit;
+        box-shadow: none;
+    }
+
+    .nd_coverage_dropdown_list li {
+        height: 60px;
+        margin-bottom: 11px;
+
+
+        border: none;
+    }
+
+    .nd_coverage_dropdown_list_item {
+        height: 100%;
+        padding-left: 20%;
+
+        border: 1px var(--border-color) solid;
+        border-radius: 9px;
+    }
+
+    .nd_coverage_dropdown_list_item_active {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border: none;
+    }
+
+    .nd_coverage_map {
+        width: 59%;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -958,5 +1020,9 @@
 
     .nd_registration_form {
         padding: 100px 90px 100px 130px;
+    }
+
+    .nd_coverage_dropdown_list_item {
+        font-size: 18px;
     }
 }
