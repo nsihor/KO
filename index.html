@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="styles/header.css">
-    <link rel="stylesheet" type="text/css" href="styles/footer.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+<!--    <link rel="stylesheet" type="text/css" href="styles/select.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/footer.css">
     <title>KO</title>
 </head>
 <body>
@@ -464,7 +465,69 @@
                 </ul>
             </div>
         </section>
-<!--        reviews-->
+<!--        coverage-->
+        <section class="nd_section">
+            <div class="nd_container">
+                <div class="nd_section_name_wrap">
+                    <span class="nd_section_name_dot"></span>
+                    <h2 class="nd_section_name">COVERAGE IN UKRAINE</h2>
+                </div>
+                <div class="nd_section_mid">
+                    <h3 class="nd_section_title nd_coverage_title">Regional <span class="nd_accent_text">educational portals</span></h3>
+                    <p class="nd_benefits_card_text">In recent years, we have built and operate educational portals for cities, regions and districts. And we are not going to stop there!</p>
+                </div>
+                <div class="nd_coverage_main">
+<!--                    mobile-->
+                    <div data-action="nd_dropdown" class="nd_coverage_dropdown">
+                        <button data-action="nd_dropdown__button" class="nd_coverage_dropdown_button  nd_card">
+                            <span>
+                                <span data-action="nd_dropdown__button_dig" class="nd_coverage_dropdown_button_dig">01. </span>
+                                <span data-action="nd_dropdown__button_text">Днепропетровская область</span>
+                            </span>
+                            <div class="nd_blog_card_link_svg_wrap nd_coverage_svg_wrap">
+                                <svg width="15" height="11">
+                                    <use xlink:href="./img/svg/arrow-right-link.svg#arrow-right-link"></use>
+                                </svg>
+                            </div>
+                        </button>
+                        <ul data-action="nd_dropdown__list" class="nd_coverage_dropdown_list">
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="dp">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">01. </span>
+                                <span data-action="nd_dropdown__list_item_text">Днепропетровская область</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="lv">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">02. </span>
+                                <span data-action="nd_dropdown__list_item_text">Львовская область</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="ods">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">03. </span>
+                                <span data-action="nd_dropdown__list_item_text">Одесская область</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="kg">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">04. </span>
+                                <span data-action="nd_dropdown__list_item_text">Кировоградская область</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="ark">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">05. </span>
+                                <span data-action="nd_dropdown__list_item_text">Автономная республика Крым</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="zkp">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">06. </span>
+                                <span data-action="nd_dropdown__list_item_text">Закарпатская область</span>
+                            </li>
+                            <li data-action="nd_dropdown__list_item" class="nd_coverage_dropdown_list_item" data-value="don">
+                                <span data-action="nd_dropdown__list_item_dig" class="nd_coverage_dropdown_button_dig">07. </span>
+                                <span data-action="nd_dropdown__list_item_text">Донецкая область</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <svg class="nd_coverage_map" width="100%" height="auto" viewBox="0 0 894 484">
+                        <use data-action="nd_dropdown__map" xlink:href="./img/svg/map-dp.svg#map"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <!--        reviews-->
         <section class="nd_section">
             <div class="nd_container">
                 <div class="nd_section_name_wrap">
@@ -551,7 +614,7 @@
                     <div class="nd_registration_img_wrap">
                         <div class="nd_registration_img"></div>
                     </div>
-                    <form action="" class="nd_registration_form nd_card">
+                    <form action="" name="nd-registration_main" class="nd_registration_form nd_card">
                         <h3 class="nd_section_title nd_registration_form_title">Registration of an <span class="nd_accent_text">educational institution</span></h3>
                         <label class="nd_registration_label">
                             The name of the institution
@@ -645,5 +708,6 @@
         </div>
     </footer>
 <script src="index.js" type="module"></script>
+<script src="js/select.js" type="module"></script>
 </body>
 </html>
