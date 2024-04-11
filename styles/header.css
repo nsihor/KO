@@ -43,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    padding: 10px 0;
+    padding: 14px 0;
 }
 
 .nd_logo_d {
@@ -207,13 +207,16 @@
         height: 102px;
     }
 
+    .nd_h_logo {
+        padding: 32px 24px;
+    }
+
     .nd_logo_m {
         display: none;
     }
 
     .nd_logo_d {
         display: flex;
-        padding: 25px 31px 29px;
     }
 
     .nd_h_container {
