@@ -4,9 +4,6 @@
     padding: 75px 0 120px;
 }
 
-.nd_registration_main_wrap {
-}
-
 .nd_registration_main_main {
     padding-bottom: 75px;
 }
@@ -73,9 +70,6 @@
     height: auto;
 }
 
-.nd_registration_main_card_right {
-}
-
 .nd_registration_main_card_name {
     font-size: 24px;
     font-weight: 500;
@@ -95,8 +89,6 @@
 
 .nd_registration_main_card_list {
     padding-bottom: 36px;
-
-    list-style: initial;
 }
 
 .nd_registration_main_card_item {
@@ -154,72 +146,121 @@
     /*regs main*/
 
     .nd_registration_main {
+        padding: 130px 0 200px;
     }
 
     .nd_registration_main_wrap {
+        display: flex;
+        gap: 8%;
     }
 
     .nd_registration_main_main {
+        width: 46%;
+        padding-bottom: 0;
+    }
+
+    .nd_registration_main_main, .nd_section_title {
+        max-width: 100%;
     }
 
     .nd_registration_main_text {
+        font-size: 24px;
+        margin-top: 64px;
     }
 
     .nd_registration_main_second_text, .nd_registration_main_second_text_last {
+        font-size: 18px;
+        line-height: 25px;
     }
 
     .nd_registration_main_second_text_last {
-    }
-
-    .nd_registration_main_second_text_accent {
+        margin-bottom: 34px;
     }
 
     .nd_registration_main_link {
+        font-size: 24px;
+        line-height: 30px;
     }
 
     .nd_registration_main_list {
+        width: 46%;
     }
 
     .nd_registration_main_card {
+        display: flex;
+
+        gap: 15px;
+
+        padding: 25px 10px;
     }
 
     .nd_registration_main_card_left {
+        text-align: center;
+        padding-bottom: 0;
     }
 
     .nd_registration_main_card_img_wrap {
+        width: 100px;
+        height: 100px;
+
+        margin-bottom: 41px;
     }
 
     .nd_registration_main_card_img {
-    }
-
-    .nd_registration_main_card_right {
+        width: 70px;
     }
 
     .nd_registration_main_card_name {
+        margin-bottom: 24px;
     }
 
     .nd_registration_main_card_accent_text {
+        line-height: 22.5px;
     }
 
     .nd_registration_main_card_list {
+        padding-bottom: 0;
     }
 
     .nd_registration_main_card_item {
-    }
+        line-height: 25px;
 
-    .nd_registration_main_card_item:last-child {
-    }
-
-    .nd_registration_main_card_dot {
+        gap: 5px;
+        margin-bottom: 4px;
     }
 
     .nd_registration_main_card_teacher_text {
+        line-height: 22.5px;
+
+        margin-bottom: 10px;
     }
 
     .nd_registration_main_btn_d {
+        display: flex;
     }
 
-    .nd_registration_main_btn_d, .nd_registration_main_btn_m {
+    .nd_registration_main_btn_m {
+        display: none;
+        margin: 0 13px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .nd_registration_main_card{
+        gap: 34px;
+
+        padding: 65px 45px;
+    }
+
+    .nd_registration_main_card_img_wrap{
+        width: 167px;
+        height: 167px;
+    }
+
+    .nd_registration_main_card_img{
+        width: 100px;
     }
 
 }
