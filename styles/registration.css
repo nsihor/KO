@@ -1,3 +1,42 @@
+.nd_registration_form_wrap {
+}
+
+.nd_registration_form {
+}
+
+.nd_registration_title {
+}
+
+.nd_registration_label {
+}
+
+.nd_registration_input {
+}
+
+.nd_registration_check_wrap {
+}
+
+.nd_registration_checkbox_text {
+}
+
+.nd_registration_checkbox {
+}
+
+.nd_registration_checkbox_link {
+}
+
+.nd_registration_captcha {
+}
+
+.nd_registration_captcha_img {
+}
+
+.nd_registration_captcha_newCode {
+}
+
+.nd_registration_y_btn {
+}
+
 /*regs main*/
 
 .nd_registration_main {
@@ -141,6 +180,8 @@
     line-height: 25px;
     letter-spacing: 1.5px;
 }
+
+/*organization*/
 
 @media screen and (min-width: 992px) {
     /*regs main*/
