@@ -4,6 +4,8 @@
 
 .nd_registration_form {
     padding: 68px 10px 75px;
+    max-width: 747px;
+    margin: 0 auto;
 }
 
 .nd_registration_title {
@@ -71,9 +73,6 @@
     align-items: center;
     gap: 28px;
     margin-bottom: 30px;
-}
-
-.nd_registration_captcha_img {
 }
 
 .nd_registration_captcha_newCode {
@@ -230,15 +229,35 @@
     letter-spacing: 1.5px;
 }
 
-/*organization*/
-
 @media screen and (min-width: 992px) {
+    .nd_registration_form_wrap {
+        padding: 120px 0 200px;
+    }
+
+    .nd_registration_form {
+        padding: 105px 105px 120px;
+    }
+
+    .nd_registration_title {
+        font-size: 45px;
+        line-height: 64px;
+    }
+
     .nd_registration_label {
+        font-size: 16px;
         margin-bottom: 43px;
     }
 
     .nd_registration_label_last {
         margin-bottom: 70px;
+    }
+
+    .nd_registration_input {
+        height: 17px;
+    }
+
+    .nd_registration_captcha_label {
+        margin-bottom: 75px;
     }
 
     /*regs main*/
