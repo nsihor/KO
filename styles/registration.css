@@ -1,40 +1,89 @@
 .nd_registration_form_wrap {
+    padding: 75px 15px 120px;
 }
 
 .nd_registration_form {
+    padding: 68px 10px 75px;
 }
 
 .nd_registration_title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+    letter-spacing: -1px;
+    text-align: center;
+
+    margin-bottom: 46px;
 }
 
 .nd_registration_label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-grey-color);
+    margin-bottom: 39px;
+}
+
+.nd_registration_label_last {
+    margin-bottom: 50px;
 }
 
 .nd_registration_input {
+    width: 100%;
+    height: 14px;
+    padding-bottom: 4px;
+
+    border: none;
+    border-bottom: 1px #9CA2B140 solid;
+    outline: none;
 }
 
-.nd_registration_check_wrap {
+.nd_registration_checkbox_label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: 1px;
 }
 
-.nd_registration_checkbox_text {
+.nd_registration_hidden_checkbox:checked + .nd_registration_checkbox {
+    background-image: url(../img/svg/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nd_registration_hidden_checkbox:focus + .nd_registration_checkbox {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 2px var(--primary-color);
 }
 
 .nd_registration_checkbox {
-}
-
-.nd_registration_checkbox_link {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-right: 19px;
 }
 
 .nd_registration_captcha {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 30px;
 }
 
 .nd_registration_captcha_img {
 }
 
 .nd_registration_captcha_newCode {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
-.nd_registration_y_btn {
+.nd_registration_captcha_label {
+    margin-bottom: 50px;
 }
 
 /*regs main*/
@@ -184,6 +233,14 @@
 /*organization*/
 
 @media screen and (min-width: 992px) {
+    .nd_registration_label {
+        margin-bottom: 43px;
+    }
+
+    .nd_registration_label_last {
+        margin-bottom: 70px;
+    }
+
     /*regs main*/
 
     .nd_registration_main {
