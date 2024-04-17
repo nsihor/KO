@@ -23,7 +23,8 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--dark-grey-color);
-    margin-bottom: 39px;
+    margin: 0 auto 39px;
+    max-width: 587px;
 }
 
 .nd_registration_label_last {
@@ -81,8 +82,22 @@
     letter-spacing: 1px;
 }
 
-.nd_registration_captcha_label {
-    margin-bottom: 50px;
+.nd_registration_calendar {
+}
+
+/*regs parent*/
+
+.nd_registration_parent_text {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1px;
+
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+.nd_registration_paren_btn_wrap .nd_y_b_btn {
+    margin: 0 auto;
 }
 
 /*regs main*/
@@ -256,8 +271,7 @@
         height: 17px;
     }
 
-    .nd_registration_captcha_label {
-        margin-bottom: 75px;
+    .nd_registration_calendar {
     }
 
     /*regs main*/
