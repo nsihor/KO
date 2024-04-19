@@ -130,9 +130,13 @@
                 Gender *
                 <input type="text" name="gender" class="nd_registration_input">
             </label>
-            <label class="nd_registration_label nd_registration_label_calendar">
-                Date of Birth *
-                <input type="date" name="date" class="nd_registration_calendar">
+            <label class="nd_registration_label nd_registration_label_date">
+                Date of Birth
+                <div class="nd_registration_label_date_input_wrap">
+                    <input placeholder="01" class="nd_registration_input nd_registration_date" name="day"></input>
+                    <input placeholder="05" class="nd_registration_input nd_registration_date" name="month"></input>
+                    <input placeholder="1995" class="nd_registration_input nd_registration_date" name="year"></input>
+                </div>
             </label>
             <label class="nd_registration_label">
                 Address
