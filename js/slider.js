@@ -17,7 +17,7 @@ function calculateStep(list) {
     const secondChild = firstChild.nextElementSibling;
     const gap = secondChild.getBoundingClientRect().left - firstChild.getBoundingClientRect().right;
 
-    return firstChildWidth + gap
+    return firstChildWidth + gap;
 }
 
 function findSliderElements(name) {
@@ -25,11 +25,17 @@ function findSliderElements(name) {
     const leftBtn = document.querySelector(`[data-action="nd-${name}-btn-left"]`);
     const rightBtn = document.querySelector(`[data-action="nd-${name}-btn-right"]`);
 
+    console.log(list)
+
+    if (!list) return null
+
     return {list, leftBtn, rightBtn};
 }
 
 function createSlider(name) {
-    const {list, leftBtn, rightBtn} = findSliderElements(name)
+    if (!findSliderElements(name)) return null
+
+    const {list, leftBtn, rightBtn} = findSliderElements(name);
 
     let scrollAmount = 0;
     const step = calculateStep(list);
@@ -59,10 +65,12 @@ function createSlider(name) {
 
 // slider creating
 
-createSlider('statistics')
+createSlider('statistics');
 
-createSlider('blog')
+createSlider('blog');
 
-createSlider('sites')
+createSlider('sites');
 
-createSlider('reviews')
+createSlider('reviews');
+
+export default createSlider;
