@@ -1,3 +1,10 @@
+/*:root {*/
+/*    --gap: 1rem;*/
+/*    --card-width: clamp(280px, 20vw, 100vw);*/
+/*    --card-aspect-ratio: 5 / 7;*/
+/*    --card-height: calc(var(--card-width) * (7 / 5));*/
+/*}*/
+
 .nd_registration_form_wrap {
     padding: 75px 15px 120px;
 }
@@ -55,7 +62,7 @@
 }
 
 .nd_registration_hidden_checkbox:checked + .nd_registration_checkbox {
-    background-image: url(../img/svg/check.svg);
+    background-image: url(../../img/svg/check.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -296,13 +303,22 @@
     }
 
     .nd_registration_main_wrap {
+        /*position: relative;*/
+
         display: flex;
         gap: 8%;
     }
 
     .nd_registration_main_main {
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 0;*/
+
         width: 46%;
         padding-bottom: 0;
+
+        /*animation: scale 1s linear both;*/
+        /*animation-timeline: scroll(root);*/
     }
 
     .nd_registration_main_main, .nd_section_title {
@@ -329,6 +345,10 @@
     }
 
     .nd_registration_main_list {
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 54%;*/
+
         width: 46%;
     }
 
