@@ -28,8 +28,8 @@
 
 .nd_rates_table_wrap {
     overflow: auto;
-    padding-bottom: 20px;
-    margin-right: -15px;
+    margin: 0 -15px;
+    padding: 0 15px 20px;
 }
 
 .nd_rates_table_wrap::-webkit-scrollbar {
@@ -43,7 +43,6 @@
 }
 
 table {
-    margin-right: 15px;
     overflow: auto;
 
     font-size: 12px;
@@ -143,8 +142,6 @@ tr td:first-child:not(:last-child) {
 .nd_rates_check svg {
     width: 22px;
     height: 17px;
-    /*width: 28px;*/
-    /*height: 22px;*/
 }
 
 h3 {
@@ -159,4 +156,88 @@ h3 {
     font-weight: 400;
     line-height: 12.5px;
     color: #16031F;
+}
+
+@media screen and (min-width: 992px) {
+    .nd_rates {
+        padding: 90px 0 130px;
+    }
+
+    .nd_rates_title {
+        font-size: 65px;
+        line-height: 64px;
+        letter-spacing: 0.23px;
+
+        margin-bottom: 90px;
+    }
+
+    .nd_y_btn {
+        min-width: 150px;
+    }
+
+    .nd_rates_pdf_btn {
+        display: none;
+    }
+
+    .nd_rates_table_wrap {
+        margin: 0 -148px;
+        padding: 0 148px 20px;
+    }
+
+    table {
+        min-width: calc(100% - 148px);
+
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 25px 20px;
+        max-width: 190px;
+    }
+
+    thead {
+        font-size: 18px;
+    }
+
+    tr td:first-child:not(:last-child) {
+        font-size: 14px;
+    }
+
+    .nd_rates_bold_text, .nd_rates_bold_text_lh {
+        font-size: 14px;
+    }
+
+    .nd_rates_big_d {
+        font-size: 45px;
+    }
+
+    .nd_rates_check {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nd_rates_check svg {
+        width: 28px;
+        height: 22px;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
+
+    .nd_rates_domain {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .nd_rates_table_wrap {
+        margin-left: 0;
+        padding-left: 0;
+        overflow: hidden;
+    }
+
+    table {
+        min-width: 100%;
+    }
 }
