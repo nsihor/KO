@@ -58,6 +58,13 @@
 .nd_arrow_btn:disabled, .nd_arrow_btn:disabled {
     border-color: var(--grey-color);
 }
+
+.nd_btn_wrap {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
 @media screen and (min-width: 992px) {
 
     .nd_w_btn, .nd_b_btn, .nd_y_btn {
