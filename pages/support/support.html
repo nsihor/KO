@@ -640,22 +640,22 @@
             </div>
             <div class="nd_support_block nd_card">
                 <h3 class="nd_support_block_title nd_support_pag_title">Портал "Классная Оценка" описание сервисов</h3>
-                <ul class="nd_support_img_list">
-                    <li class="">
+                <ul class="nd_support_img_list" datatype="slider-list">
+                    <li class="" datatype="slider-item">
                         <img src="../../img/support.jpg" alt="textbook" class="nd_support_card_img">
                     </li>
-                    <li class="nd_none">
+                    <li class="nd_none" datatype="slider-item">
                         <img src="../../img/news1.jpg" alt="img" class="nd_support_card_img">
                     </li>
-                    <li class="nd_none">
+                    <li class="nd_none" datatype="slider-item">
                         <img src="../../img/kapitoshka-school.jpg" alt="img" class="nd_support_card_img">
                     </li>
-                    <li class="nd_none">
+                    <li class="nd_none" datatype="slider-item">
                         <img src="../../img/bahmut-school.jpg" alt="img" class="nd_support_card_img">
                     </li>
                 </ul>
                 <div class="nd_support_btn_container">
-                    <div class="nd_support_card_btn_wrap">
+                    <div class="nd_support_card_btn_wrap" datatype="btn-wrap">
                         <button class="nd_btn_wrap nd_support_share_svg">
                             <svg width="30" height="32">
                                 <use xlink:href="../../img/svg/share.svg#share"></use>
@@ -667,15 +667,17 @@
                             </svg>
                         </button>
                         <div class="nd_support_pag_btn_wrap">
-                            <button class="nd_arrow_btn" disabled>
+                            <button class="nd_arrow_btn" data-action="slider-btn-previous" disabled>
                                 <svg width="14" height="10">
                                     <use xlink:href="../../img/svg/arrow-left.svg#arrow-left"></use>
                                 </svg>
                             </button>
                             <span class="nd_support_page_counter">
-                            <span class="nd_accent_text">01</span> of <span>05</span>
-                        </span>
-                            <button class="nd_arrow_btn">
+                                <span class="nd_accent_text" data-value="slider-current-slide">01</span>
+                                of
+                                <span data-value="slider-all-slides">01</span>
+                            </span>
+                            <button class="nd_arrow_btn" data-action="slider-btn-next">
                                 <svg width="14" height="10">
                                     <use xlink:href="../../img/svg/arrow-right.svg#arrow-right"></use>
                                 </svg>
@@ -762,5 +764,6 @@
 </footer>
 <script src="../../js/menuToggle.js" type="module"></script>
 <script src="../../js/accordion.js" type="module"></script>
+<script src="../../js/supportSlider.js" type="module"></script>
 </body>
 </html>

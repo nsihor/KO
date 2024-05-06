@@ -98,6 +98,8 @@
 
 .nd_support_card_img {
     width: 100%;
+    max-height: 60vw;
+    object-fit: cover;
 }
 
 .nd_support_btn_container {
@@ -182,6 +184,10 @@
 
     .nd_support_img_list {
         padding: 0 0 40px;
+    }
+
+    .nd_support_card_img{
+        max-height: 525px;
     }
 
     .nd_support_card_btn_wrap {
