@@ -1,31 +1,46 @@
-// const wrapper = document.querySelector('[datatype="wrapper"]');
-// const main = document.querySelector('[datatype="main"]');
-// const list = document.querySelector('[datatype="list"]');
-//
-// const position = window.getComputedStyle(wrapper).getPropertyValue('position');
-// if ( position === 'relative') wrapper.style.height = `${list.offsetHeight}px`;
-//
-// let lastScrollTop = 0;
-//
-// window.addEventListener('scroll', function (e) {
-//     let st = window.pageYOffset || document.documentElement.scrollTop;
-//
-//     if (st > lastScrollTop) {
-//         // Прокручується вниз
-//         if (st > 280) {
-//             const currentTop = parseFloat(window.getComputedStyle(main).getPropertyValue('top'));
-//             main.style.top = `${currentTop + 7}px`;
-//         }
-//     } else {
-//         // Прокручується вгору
-//         const currentTop = parseFloat(window.getComputedStyle(main).getPropertyValue('top'));
-//         if (currentTop > 0) {
-//             main.style.top = `${currentTop - 7}px`;
-//         }
-//     }
-//
-//     lastScrollTop = st <= 0 ? 0 : st;
-// });
-//
-//
-// //280
+const wrapper = document.querySelector('[datatype="wrapper"]');
+const main = document.querySelector('[datatype="main"]');
+const list = document.querySelector('[datatype="list"]');
+
+const position = window.getComputedStyle(wrapper).getPropertyValue('position');
+if ( position === 'relative') wrapper.style.height = `${list.offsetHeight}px`;
+
+window.addEventListener('resize', function() {
+    const position = window.getComputedStyle(wrapper).getPropertyValue('position');
+    if ( position === 'relative') {
+        wrapper.style.height = `${list.offsetHeight}px`;
+    } else {
+        wrapper.style.height = '100%';
+    }
+});
+
+
+function calculateTop(s) {
+    const speed = 0.8;
+    const gap = (s * speed) - 280;
+    const maxGap = wrapper.offsetHeight - main.offsetHeight;
+
+    if (gap > maxGap) {
+        return `${maxGap}px`
+    }
+
+    if (gap <= 0) {
+        return 0;
+    }
+
+    return `${gap}px`;
+}
+
+window.addEventListener('scroll', function () {
+    let s = window.pageYOffset || document.documentElement.scrollTop;
+
+    const position = window.getComputedStyle(wrapper).getPropertyValue('position');
+    if ( position === 'static') {
+        main.style.top = 0;
+        return
+    }
+
+    if (s > 280) {
+        main.style.top = calculateTop(s);
+    }
+});
