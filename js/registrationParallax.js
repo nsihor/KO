@@ -2,18 +2,14 @@ const wrapper = document.querySelector('[datatype="wrapper"]');
 const main = document.querySelector('[datatype="main"]');
 const list = document.querySelector('[datatype="list"]');
 
-const position = window.getComputedStyle(wrapper).getPropertyValue('position');
-if ( position === 'relative') wrapper.style.height = `${list.offsetHeight}px`;
-
-window.addEventListener('resize', function() {
+function calculateWrapperH() {
     const position = window.getComputedStyle(wrapper).getPropertyValue('position');
     if ( position === 'relative') {
         wrapper.style.height = `${list.offsetHeight}px`;
     } else {
         wrapper.style.height = '100%';
     }
-});
-
+}
 
 function calculateTop(s) {
     const speed = 0.8;
@@ -30,6 +26,10 @@ function calculateTop(s) {
 
     return `${gap}px`;
 }
+
+calculateWrapperH();
+
+window.addEventListener('resize', calculateWrapperH);
 
 window.addEventListener('scroll', function () {
     let s = window.pageYOffset || document.documentElement.scrollTop;
