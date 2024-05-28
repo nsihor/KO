@@ -1,4 +1,4 @@
-const listWrapper = document.querySelector('[datatype="lists-wrap"]');
+const wrapper = document.querySelector('[datatype="lists-wrap"]');
 const btnPrevious = document.querySelector('[data-action="btn-previous"]');
 const btnNext = document.querySelector('[data-action="btn-next"]');
 const currentPageSpan = document.querySelector('[data-value="current-page"]');
@@ -187,6 +187,8 @@ const news = [
     }
 ]
 
+let isScrollListenerAdded = false;
+
 function numberNormalize(num) {
     return num.toString().padStart(2, '0');
 }
@@ -263,13 +265,15 @@ function appendNews(currentPage, itemsPerPage, newsArray) {
     const newsArrays = createArrays(newsForPage);
     const ulArray = createUlArray(newsArrays);
 
-    listWrapper.innerHTML = '';
+    wrapper.innerHTML = '';
     ulArray.forEach(function (ul) {
-        listWrapper.insertAdjacentHTML('beforeend', ul.outerHTML);
+        wrapper.insertAdjacentHTML('beforeend', ul.outerHTML);
     })
 }
 
 appendNews(currentPage, 12, news)
+parallax();
+
 btnPrevious.addEventListener('click', function () {
     if (currentPage <= 1) return;
 
@@ -286,6 +290,8 @@ btnPrevious.addEventListener('click', function () {
     }
 
     appendNews(currentPage, 12, news)
+
+    parallax();
 });
 
 btnNext.addEventListener('click', function () {
@@ -303,4 +309,65 @@ btnNext.addEventListener('click', function () {
     }
 
     appendNews(currentPage, 12, news)
+
+    parallax();
 });
+
+
+// Parallax ----------------------------------------------------------------------------------------
+
+function calculatePadding(s) {
+    const speed = 0.1;
+    const wrapH = wrapper.offsetHeight;
+    const padding = (wrapH - s) * speed;
+    const maxPadding = 225;
+
+    if (padding >= maxPadding) {
+        return `${maxPadding}px`;
+    }
+
+    return `${padding}px`;
+}
+
+function addPadding(lists) {
+    let s = window.pageYOffset || document.documentElement.scrollTop;
+
+    lists[1].style.paddingTop = calculatePadding(s);
+    lists[0].style.paddingBottom = calculatePadding(s);
+    lists[2].style.paddingBottom = calculatePadding(s);
+}
+
+function removeScrollListening(lists) {
+    window.removeEventListener('scroll', function () {
+        addPadding(lists);
+    });
+    isScrollListenerAdded = false;
+}
+
+function parallax() {
+    const lists = wrapper.querySelectorAll('ul');
+
+    if (isScrollListenerAdded) {
+        removeScrollListening(lists);
+    }
+
+    addPadding(lists);
+
+    if (window.innerWidth > 1200) {
+        window.addEventListener('scroll', function () {
+            addPadding(lists);
+        });
+        isScrollListenerAdded = true;
+    }
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1200 && !isScrollListenerAdded) {
+            window.addEventListener('scroll', function () {
+                addPadding(lists);
+            });
+            isScrollListenerAdded = true;
+        } else if (window.innerWidth <= 1200 && isScrollListenerAdded) {
+            removeScrollListening(lists)
+        }
+    });
+}

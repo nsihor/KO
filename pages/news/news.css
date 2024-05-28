@@ -122,8 +122,4 @@
     .nd_news_lists_wrap {
         flex-wrap: nowrap;
     }
-
-    .nd_news_list:nth-child(2) {
-        margin-top: 225px;
-    }
 }
