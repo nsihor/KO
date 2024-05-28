@@ -317,7 +317,7 @@ btnNext.addEventListener('click', function () {
 // Parallax ----------------------------------------------------------------------------------------
 
 function calculatePadding(s) {
-    const speed = 0.1;
+    const speed = 0.12;
     const wrapH = wrapper.offsetHeight;
     const padding = (wrapH - s) * speed;
     const maxPadding = 225;
@@ -326,15 +326,19 @@ function calculatePadding(s) {
         return `${maxPadding}px`;
     }
 
-    return `${padding}px`;
+    console.log(Math.floor(padding))
+
+    return `${Math.floor(padding)}px`;
 }
 
 function addPadding(lists) {
     let s = window.pageYOffset || document.documentElement.scrollTop;
+    const padding = calculatePadding(s);
+    // console.log(s)
 
-    lists[1].style.paddingTop = calculatePadding(s);
-    lists[0].style.paddingBottom = calculatePadding(s);
-    lists[2].style.paddingBottom = calculatePadding(s);
+    lists[1].style.paddingTop = padding;
+    lists[0].style.paddingBottom = padding;
+    lists[2].style.paddingBottom = padding;
 }
 
 function removeScrollListening(lists) {
