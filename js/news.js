@@ -326,15 +326,12 @@ function calculatePadding(s) {
         return `${maxPadding}px`;
     }
 
-    console.log(Math.floor(padding))
-
     return `${Math.floor(padding)}px`;
 }
 
 function addPadding(lists) {
     let s = window.pageYOffset || document.documentElement.scrollTop;
     const padding = calculatePadding(s);
-    // console.log(s)
 
     lists[1].style.paddingTop = padding;
     lists[0].style.paddingBottom = padding;
